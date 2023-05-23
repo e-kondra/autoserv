@@ -18,9 +18,13 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
 from users.views import UserModelViewSet
+from clients.views import ClientModelViewSet
+from orders.views import OrderModelViewSet
 
 router = DefaultRouter()
 router.register('users', UserModelViewSet)
+router.register('clients', ClientModelViewSet)
+router.register('orders', OrderModelViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
