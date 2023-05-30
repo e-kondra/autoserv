@@ -11,6 +11,8 @@ const UserItem = ({user}) => {
 };
 
 const UserList = ({users}) => {
+    console.log(users)
+
     return (
         <Table striped bordered hover>
             <thead>
@@ -19,9 +21,9 @@ const UserList = ({users}) => {
                     <th>Email</th>
                 </tr>
             </thead>
-                <tbody>
-                    {users.map((user) => <UserItem user={user}/>)}
-                </tbody>
+            <tbody>
+                {users.map((user) => <UserItem user={user}/>)}
+            </tbody>
         </Table>
     )
 

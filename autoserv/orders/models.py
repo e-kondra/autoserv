@@ -14,6 +14,7 @@ class Consumption(models.Model):
     # class orders consumptions
     description = models.TextField
     summa = models.FloatField
+    is_actual = models.BooleanField(default=True)
 
 
 class Order(models.Model):
@@ -22,11 +23,13 @@ class Order(models.Model):
     car_brand = models.OneToOneField(Brand, on_delete=models.CASCADE)
     car_model = models.CharField(max_length=100, blank=True)
     car_comment = models.TextField(blank=True)
-    consumptions = models.ManyToManyField(Consumption)
+    consumptions = models.ManyToManyField(Consumption, blank=True)
     client = models.OneToOneField(Client, blank=True, on_delete=models.CASCADE)
-    clients_str = models.CharField(max_length=100)
-    total = models.FloatField
-    comment = models.TextField
+    clients_str = models.CharField(max_length=100, blank=True)
+    total = models.FloatField(default=0)
+    comment = models.TextField(blank=True)
+    is_actual = models.BooleanField(default=True)
+
 
 
 

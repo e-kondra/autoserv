@@ -1,20 +1,19 @@
 import React from "react";
-import {Navbar, Nav, Link} from "react-bootstrap";
+import {Link} from "react-router-dom"
+import {Navbar, Nav} from "react-bootstrap";
 
 const Menu = () =>{
     return (
-        <container>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link>Orders</Nav.Link>
-                        <Nav.Link>Clients</Nav.Link>
-                        <Nav.Link>Users</Nav.Link>
+                        <Link to='/' className="link-light nav-link">Orders</Link>
+                        <Link to='/clients' className="link-light nav-link">Clients</Link>
+                        <Link to='/users' className="link-light nav-link">Users</Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-        </container>
     )
 }
 
