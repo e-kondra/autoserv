@@ -10,6 +10,7 @@ const ClientsOrders = ({orders}) => {
     // let filteredOrders = orders.filter((order => order.client.includes(parseInt(id)))
     return (
         <Table striped bordered hover>
+
             <thead>
                 <tr>
                     <th>Date </th>

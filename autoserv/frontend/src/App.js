@@ -63,7 +63,7 @@ class App extends React.Component {
                 <Route path='/' element={<OrderList orders={this.state.orders}/>} exact />
                 <Route path='/clients' element={<ClientList clients={this.state.clients} exact />}/>
                 <Route path='/clients/orders/:id' element={<ClientsOrders orders={this.state.orders}/>}/>
-                <Route path='/clients/client/:id' element={<Client clients={this.state.clients}/>}/>
+                <Route path='/clients/:id' element={<Client clients={this.state.clients}/>}/>
 //                <Route path="/user" element={<Navigate to="/users" replace />} />  -- Just example of redirect
                 <Route path='*' element={<NotFound404 />} />
             </Routes>

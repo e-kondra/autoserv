@@ -11,7 +11,7 @@ const ClientItem = ({client}) => {
     return (
     <tr>
         <td>
-            <Link to={`client/${client.id}`}>{client.name + " " + client.last_name}</Link>
+            <Link to={`${client.id}`}>{client.name + " " + client.last_name}</Link>
         </td>
         <td>{client.phone}</td>
         <td>{client.address}</td>
